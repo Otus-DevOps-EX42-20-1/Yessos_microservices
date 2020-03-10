@@ -6,9 +6,11 @@ variables.json
 .terraform/
 .vscode
 *.retry
-docker-compose.yml
 build_info.txt
 prometheus/
 
 ## python specific
 *.pyc
+
+## docker-compose
+.env
