@@ -12,3 +12,4 @@ variables.json
 
 ## docker-compose
 .env
+build_info.txt
