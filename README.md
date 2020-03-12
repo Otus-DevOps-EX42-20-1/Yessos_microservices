@@ -9,3 +9,6 @@ Project configured through docker-compose.yml. Network separated into front and 
 # Monitoring
 - Prometheus monitoring added to Reddit App
 - Container uploaded to Docker Hub user iakrevetko
+- Graphs added to cadvisor and Graphana
+- App metrics and buisness-logic metrics added
+- Alerting added with alertmanager and integrated into Slack
