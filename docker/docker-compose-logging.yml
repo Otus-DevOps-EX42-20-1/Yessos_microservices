@@ -1,0 +1,54 @@
+version: '3.3'
+services:
+
+  zipkin:
+    image: openzipkin/zipkin
+    ports:
+      - "9411:9411"
+    networks:
+      - back_net
+      - front_net
+
+  fluentd:
+    image: ${USERNAME}/fluentd
+    networks:
+      - back_net
+      - front_net
+    ports:
+      - "24224:24224"
+      - "24224:24224/udp"
+    environment:
+      - ZIPKIN_ENABLED=${ZIPKIN_ENABLED}
+
+  elasticsearch:
+    image: elasticsearch:7.4.0
+    environment:
+      - discovery.type=single-node
+      - ZIPKIN_ENABLED=${ZIPKIN_ENABLED}
+    networks:
+      - back_net
+      - front_net
+    expose:
+      - 9200
+    ports:
+      - "9200:9200"
+
+  kibana:
+    image: kibana:7.4.0
+    networks:
+      - back_net
+      - front_net
+    ports:
+      - "5601:5601"
+    environment:
+      - ZIPKIN_ENABLED=${ZIPKIN_ENABLED}
+
+networks:
+  front_net:
+    ipam:
+        config:
+          - subnet: 10.0.2.0/24
+  back_net:
+    ipam:
+        config:
+          - subnet: 10.0.1.0/24
