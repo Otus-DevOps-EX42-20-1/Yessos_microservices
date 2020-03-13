@@ -12,3 +12,9 @@ Project configured through docker-compose.yml. Network separated into front and 
 - Graphs added to cadvisor and Graphana
 - App metrics and buisness-logic metrics added
 - Alerting added with alertmanager and integrated into Slack
+
+# Logging
+- Unstructured log clollection added to Reddit App
+- Visualization added with kibana
+- Structured log collection configured in fluentd
+- Tracing added with Zipkin
