@@ -18,3 +18,6 @@ Project configured through docker-compose.yml. Network separated into front and 
 - Visualization added with kibana
 - Structured log collection configured in fluentd
 - Tracing added with Zipkin
+
+# Kubernetes
+- Kubernetes THW completed
