@@ -21,3 +21,4 @@ Project configured through docker-compose.yml. Network separated into front and 
 
 # Kubernetes
 - Kubernetes THW completed
+- Reddit deployed to GKE: https://ibb.co/c8qstZk
