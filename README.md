@@ -30,3 +30,4 @@ Project configured through docker-compose.yml. Network separated into front and 
 - Persistent Volumes created for Mongo
 - Persistent Volume Claims created for Mongo
 - Dynamic Persistent Volume Claims created for Mongo
+- Пиздец
